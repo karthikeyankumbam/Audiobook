@@ -1,0 +1,12 @@
+drop schema if exists customer_db;
+create schema customer_db ;
+use customer_db;
+CREATE TABLE customer (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    full_name Text NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    username VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    status BOOLEAN NOT NULL
+);
+

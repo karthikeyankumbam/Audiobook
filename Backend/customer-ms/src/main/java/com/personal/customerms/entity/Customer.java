@@ -1,10 +1,7 @@
 package com.personal.customerms.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.validation.constraints.NotBlank;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 
 
@@ -14,13 +11,15 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @NotNull
+    private String fullName;
+    @NotNull
     private String email;
     @NotNull
     private  String username;
     @NotNull
     private String password;
     @NotNull
-    private String status;
+    private Boolean status;
 
     public Integer getId() {
         return id;
@@ -54,11 +53,11 @@ public class Customer {
         this.password = password;
     }
 
-    public String getStatus() {
+    public Boolean getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(Boolean status) {
         this.status = status;
     }
 }
