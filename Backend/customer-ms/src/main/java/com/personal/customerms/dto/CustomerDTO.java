@@ -17,6 +17,7 @@ public class CustomerDTO {
     private String password;
 
     private Boolean status;
+    private Boolean isAdmin;
 
     public Integer getId() {
         return id;
@@ -64,5 +65,13 @@ public class CustomerDTO {
 
     public void setStatus(Boolean status) {
         this.status = status;
+    }
+
+    public Boolean getIsAdmin() {
+        return isAdmin;
+    }
+
+    public void setIsAdmin(Boolean admin) {
+        isAdmin = admin;
     }
 }
