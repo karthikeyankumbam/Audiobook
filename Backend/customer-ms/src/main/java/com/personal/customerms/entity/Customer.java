@@ -20,6 +20,8 @@ public class Customer {
     private String password;
     @NotNull
     private Boolean status;
+    @NotNull
+    private Boolean isAdmin;
 
     public Integer getId() {
         return id;
@@ -59,5 +61,21 @@ public class Customer {
 
     public void setStatus(Boolean status) {
         this.status = status;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public Boolean getIsAdmin() {
+        return isAdmin;
+    }
+
+    public void setIsAdmin(Boolean admin) {
+        isAdmin = admin;
     }
 }
